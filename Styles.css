@@ -1,1 +1,10 @@
-
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font: 15pt/1.5 monospace;
+  min-height: 100vh;
+  background: #2B2B2B;
+}
