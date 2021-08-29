@@ -6,12 +6,14 @@
 body{
   font:15pt/1.5 monospace;
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 3em auto 3em;
   background: #2B2B2B;
 }
 header{
   margin:10px 0;
-  height:3em;
-  width:100%;
+  grid-area: 1 / 1 / 2 / 4;
   font-weight: bold;
   font-size: 20px;
 }
@@ -25,7 +27,7 @@ nav{
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  width:98%;
+  border:10px solid transparent;
 }
 .container,nav{
   margin:auto;
@@ -92,3 +94,5 @@ a:hover{
   }
   
 }
+/*.div2 { grid-area: 2 / 2 / 3 / 3; }
+.div3 { grid-area: 3 / 1 / 4 / 4; }*/
