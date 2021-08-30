@@ -65,11 +65,18 @@ a:hover{
   text-decoration: underline;
   opacity: .8;
 }
+footer{
+  grid-area: 3 / 1 / 4 / 4;
+}
+.main{
+  grid-area: 2 / 2 / 3 / 3;
+  margin: auto 0;
+}
 .nav-items:nth-of-type(2){
-    order: 3;
+  order: 3;
   }
 .nav-items:nth-of-type(3){
-    order: 2; 
+  order: 2; 
   }
 @media only screen and (min-width:480px){
   .info{
