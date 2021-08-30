@@ -3,13 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face{
+  font-family: poppins;
+  src: url(poppins.ttf);
+}
 body{
-  font:15pt/1.5 monospace;
+  font:15pt/1.5 poppins;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 8fr 1fr;
   grid-template-rows: 3em auto 3em;
   background: #2B2B2B;
+}
+body,a{
+  color:white;
 }
 header{
   margin:10px 0;
@@ -22,8 +29,10 @@ header{
   height:3rem;
   width:3rem;
 }
-nav{
+nav,.main,.buttns{
   display: flex;
+}
+nav{
   align-items: center;
   justify-content: space-between;
   height: 100%;
@@ -59,7 +68,6 @@ img{
 }
 a{
   text-decoration: none;
-  color:white;
 }
 a:hover{
   text-decoration: underline;
@@ -67,10 +75,51 @@ a:hover{
 }
 footer{
   grid-area: 3 / 1 / 4 / 4;
+  background: yellow;
+}
+.main,.buttns{
+  flex-direction: column;
 }
 .main{
   grid-area: 2 / 2 / 3 / 3;
+  height:100%;
   margin: auto 0;
+  justify-content: center;
+  padding-bottom: 1em;
+}
+h1{
+  font-size: 3em;
+  letter-spacing:8px;
+  text-indent: 5px;
+  margin:5% auto;
+  padding-top: .5em;
+}
+.buttns{
+  list-style: none;
+  margin: 4% auto;
+}
+input{
+ width: 100%;
+ height:3em;
+ border-radius: 3em;
+ background: yellow;
+}
+input,button{
+  border: none;
+  padding: 1em;
+  outline: none;
+  font-family: poppins;
+}
+button{
+  height:3rem;
+  width:10rem;
+  border-radius: 4px;
+  margin: 10px;
+  white-space: nowrap;
+  background: #B7B7B7;
+}
+.highlight{
+  color:yellow;
 }
 .nav-items:nth-of-type(2){
   order: 3;
@@ -79,10 +128,19 @@ footer{
   order: 2; 
   }
 @media only screen and (min-width:480px){
+  body{
+    font-size: 20pt;
+  }
   .info{
     margin: 0;
     margin-left: auto;
     display: flex;
+  }
+  h1{
+    padding: 0;
+    font-size: 3em;
+    letter-spacing: .3em;
+    text-indent: .3em;
   }
   nav{
     justify-content: flex-start;
@@ -93,10 +151,16 @@ footer{
   .nav-items:nth-of-type(3){
     order: initial; 
   }
+  .buttns{
+    flex-direction: row;
+  }
   li{
     line-height: 3em;
   }
   a,.container{
+    margin: 0 15px;
+  }
+  .container{
     margin: auto 15px;
   }
   
